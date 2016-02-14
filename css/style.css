@@ -1,0 +1,313 @@
+html,body{
+	/*max-width: 1200px !important;*/
+	/*overflow: hidden;*/
+}
+i,a,button {
+	cursor:pointer;
+}
+
+header{
+	margin-right: auto;
+	margin-left: auto;
+}
+
+#slide-to-unlock {
+	height: 800px;
+	margin-right: 0px;
+	background: rgba(164,179,87,1);
+	background: -moz-radial-gradient(center, ellipse cover, rgba(164,179,87,1) 0%, rgba(117,137,12,1) 82%, rgba(117,137,12,1) 100%);
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(164,179,87,1)), color-stop(82%, rgba(117,137,12,1)), color-stop(100%, rgba(117,137,12,1)));
+	background: -webkit-radial-gradient(center, ellipse cover, rgba(164,179,87,1) 0%, rgba(117,137,12,1) 82%, rgba(117,137,12,1) 100%);
+	background: -o-radial-gradient(center, ellipse cover, rgba(164,179,87,1) 0%, rgba(117,137,12,1) 82%, rgba(117,137,12,1) 100%);
+	background: -ms-radial-gradient(center, ellipse cover, rgba(164,179,87,1) 0%, rgba(117,137,12,1) 82%, rgba(117,137,12,1) 100%);
+	background: radial-gradient(ellipse at center, rgba(164,179,87,1) 0%, rgba(117,137,12,1) 82%, rgba(117,137,12,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a4b357', endColorstr='#75890c', GradientType=1 )
+}
+
+.welcome-contents{
+	color:white;
+}
+
+.welcome-header{
+	left: 0;
+    margin-top: -250px;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    width: 100%;
+    font-size: 36px;
+}
+
+
+@media (max-width: 767px){
+
+	.slide-to-unlock{
+		height: 1000px;
+	}
+
+	.welcome-header{
+		left: 0;
+	    margin-top: -100px;
+	    position: absolute;
+	    text-align: center;
+	    top: 30%;
+	    width: 100%;
+	    font-size: 32px;
+	}
+
+	.welcome-sliding-text{
+		top: 20px !important;
+		left: 30% !important;
+	}
+}
+
+@media (max-width: 950px){
+
+	.welcome-header{
+		left: 0;
+	    margin-top: -100px;
+	    position: absolute;
+	    text-align: center;
+	    top: 30%;
+	    width: 100%;
+	    font-size: 32px;
+	}
+
+	.welcome-sliding-text{
+		top: 20px !important;
+		left: 35% !important;
+	}
+}
+
+@media (max-width: 450px){
+
+	.welcome-header{
+		left: 0;
+	    margin-top: -100px;
+	    position: absolute;
+	    text-align: center;
+	    top: 30%;
+	    width: 100%;
+	    font-size: 32px;
+	}
+
+	.welcome-sliding-text{
+		top: 20px !important;
+		left: 23% !important;
+	}
+}
+
+.img-circle{
+	border-radius: 50% !important;
+	margin: 0;
+	padding: 0;
+	border: 4px solid white;
+}
+
+#box{
+	font-size: 25px;
+	border: 2px solid white;
+	border-radius: 10px;
+	/*min-width:100px !important;*/
+	max-width: 300px !important;
+	width: 250px !important;
+}
+
+.welcome-sliding-text{
+	position: relative;
+	text-align: center;
+	font-size: 25px;
+/*	top: 150px;*/
+	left:39%;
+	/*border:2px solid #e3e3e3;*/
+	border: 2px solid white;
+	border-radius: 10px;
+	/*padding: 10px;*/
+	min-width:100px !important;
+	max-width: 300px !important;
+	width: 250px !important;
+}
+
+#current_time{
+	font-size: 23px;
+}
+
+
+
+#slide_icon{
+	/*margin-left: 10px;
+	margin-right: 10px;*/
+	cursor:pointer;
+	position: relative;
+	border: white;
+	border-radius: 5px;
+}
+
+#slide_text{
+	min-width:180px !important;
+}
+
+#home-page{
+	display: none;
+}
+
+#main_container{
+	border: 3px solid silver;
+	height: 100%;
+}
+
+.nav-bar{
+	height: inherit;
+	font-size: 22px;
+	color: black;
+}
+
+.navbar-header{
+	color:black;
+	margin: 0;
+	padding: 5px;
+	margin: 10px;
+}
+
+.navbar-header-text{
+	padding: 10px;
+	color : black;
+}
+
+.navbar-header-text:hover{
+	color:black;
+}
+
+#nav_bar_items{
+	color:black;
+	float: right;
+	margin-top: 5px;
+}
+
+#nav_bar_items li{
+	list-style: none;
+	float:left;
+	padding: 5px;
+	margin: 5px;
+	/*border: 1px solid black;*/
+}
+
+.body-container{
+	border-top: 1px solid black;
+	margin-left: -15px;
+	margin-right: -15px;
+	height: 300px;
+	border-bottom: 1px solid black;
+	background-image : url("../images/sidSpace1.jpg");
+	background-repeat: no-repeat;
+	background-size:cover;
+}
+
+
+#bs-example-navbar-collapse-1{
+	margin-top: 18px;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: white !important;
+}
+.navbar-default .navbar-nav > li > a:hover {
+    color: #18bc9c !important;
+}
+
+
+
+@keyframes rotateFall {
+    0%      { transform: rotateZ(0deg); }
+    20%     { transform: rotateZ(10deg); animation-timing-function: ease-out; }
+    40%     { transform: rotateZ(17deg); }
+    60%     { transform: rotateZ(16deg); }
+    100%    { transform: translateY(100%) rotateZ(17deg); }
+}
+
+/* slide in from the bottom */
+@keyframes slideOutLeft {
+    to      { transform: translateX(-100%); }
+}
+
+/* rotate out newspaper */
+@keyframes rotateOutNewspaper {
+    to      { transform: translateZ(-3000px) rotateZ(360deg); opacity: 0; }
+}
+
+/* entering animations --------------------------------------- */
+/* scale up */
+@keyframes scaleUp {
+    from    { opacity: 0.3; -webkit-transform: scale(0.8); }
+}
+
+/* slide in from the right */
+@keyframes slideInRight {
+    from    { transform:translateX(100%); }
+    to      { transform: translateX(0); }
+}
+
+/* slide in from the bottom */
+@keyframes slideInUp {
+    from    { transform:translateY(100%); }
+    to      { transform: translateY(0); }
+}
+
+.ng-enter       { z-index: 8888; }
+.ng-leave       { z-index: 9999; }
+
+  
+.slide-up.ng-enter { animation: scaleUp 1.25s both ease-in; }
+.slide-up.ng-leave { transform-origin: 100% 0%; animation: rotateFall 1s both ease-in; }
+
+.resume-right-pane{
+	background-color: skyblue;
+	height: 100%;
+	padding-bottom: 50px;
+}
+
+.resume-details-top{
+	margin-top:20px;
+}
+
+.work-company{
+	padding-top: 10px;
+	font-size: 21px;
+	font-weight: bold;
+	text-decoration: underline;
+	/*color:#0D9DD8;*/
+}
+.work-date{
+	float: right;
+	font-style: italic;
+	text-decoration: underline;
+}
+
+::-webkit-scrollbar {
+  height: 1px;
+  width: 8px;
+  background: #fff;
+
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+
+  background: -webkit-linear-gradient(#5A6A96, #6183df);
+  border: 1px solid #fafafa;
+  box-shadow: inset 1px 0 0 rgba(0, 0, 0, 0.4);
+  /*
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: rgba(255,0,0,0.8); 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); */
+}
+::-webkit-scrollbar-thumb:window-inactive {
+  background: rgba(0,0,0,0.4); 
+}
