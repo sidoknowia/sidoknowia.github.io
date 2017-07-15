@@ -31,6 +31,16 @@ sidoknowia.config(function($routeProvider) {
             controller  : 'resumeCtlr'
         })
 
+        .when('/hello', {
+            templateUrl : 'pages/helloWorld.html',
+            controller  : 'blogCtlr'
+        })
+
+        .when('/first-jquery-plugin', {
+            templateUrl : 'pages/first-jquery-plugin.html',
+            controller  : 'blogCtlr'
+        })
+
         .otherwise({
             templateUrl : 'pages/404.html',
             controller  : 'sidoknowiaCtlr'
