@@ -311,3 +311,22 @@ header{
 ::-webkit-scrollbar-thumb:window-inactive {
   background: rgba(0,0,0,0.4); 
 }
+
+.demo{
+	border: 1px solid black;
+	padding: 25px 5px;
+	background-color: #f3f3f3;
+}
+
+pre{
+	padding: 0px 0px !important;
+	margin : 5px 5px !important;
+	overflow: scroll;
+	overflow-y: scroll;
+	width: 100%;
+	font-size: 15px; 
+}
+
+#preCode{
+	float: left;
+}

@@ -1,0 +1,65 @@
+<html>
+	<head>
+		<title>Table color formating</title>
+		<script type="text/javascript" src = "js/jquery.min.js"></script>
+		<script type="text/javascript" src = "js/table.js"></script>
+		
+		<style type="text/css">
+			table, th, td {
+				text-align:center;
+				 width:300px;
+  			 	 border: 1px solid black;
+   				 border-collapse: collapse;
+			}
+		</style>
+		
+		<script>
+			// Onready calling our tableCss function.
+			$(function(){
+				// Overrinding some of the defaults of our plugin
+				$("#mytable").tableCss({
+					textColor : '#333',
+					thColor    : '#1fa756',
+					trOdd	     : 'lightBlue'
+				}).hide().fadeIn('slow'); // Chaining our plugin with other jQuery methods 
+			});
+			
+		</script>
+	</head>
+	<body>
+		<table id="mytable">
+			<thead>
+				<tr>
+					<th>City</th>
+					<th>Country</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Pune</td>
+					<td>India</td>
+				</tr>
+				<tr>
+					<td>New York</td>
+					<td>USA</td>
+				</tr>
+				<tr>
+					<td>London</td>
+					<td>UK</td>
+				</tr>
+				<tr>
+					<td>Mumbai</td>
+					<td>India</td>
+				</tr>
+				<tr>
+					<td>Sydney</td>
+					<td>Australia</td>
+				</tr>
+				<tr>
+					<td>Paris</td>
+					<td>France</td>
+				</tr>
+			</tbody>
+		</table>
+	</body>
+</html>
