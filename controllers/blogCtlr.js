@@ -1,5 +1,5 @@
 sidoknowia.controller('blogCtlr',['$scope' , '$interval', '$location', 'chartService',function($scope , $interval, $location,chartService) {
-	$scope.pageclass = "slide-up";
+	//$scope.pageclass = "slide-up";
 
 	$scope.tableCssPlugin = function(){
 		$("#mytable").tableCss({

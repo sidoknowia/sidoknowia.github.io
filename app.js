@@ -41,6 +41,11 @@ sidoknowia.config(function($routeProvider) {
             controller  : 'blogCtlr'
         })
 
+        .when('/toastmaster', {
+            templateUrl : 'pages/toastmaster-speeches.html',
+            controller  : 'blogCtlr'
+        })
+
         .otherwise({
             templateUrl : 'pages/404.html',
             controller  : 'sidoknowiaCtlr'
