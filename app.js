@@ -46,6 +46,44 @@ sidoknowia.config(function($routeProvider) {
             controller  : 'blogCtlr'
         })
 
+        .when('/p2', {
+            templateUrl : 'pages/p2-organize-your-speech.html',
+            controller  : 'blogCtlr'
+        })
+
+        .when('/p3', {
+            templateUrl : 'pages/p3-get-to-point.html',
+            controller  : 'blogCtlr'
+        })
+        .when('/p4', {
+            templateUrl : 'pages/p4-how-to-say-it.html',
+            controller  : 'blogCtlr'
+        })
+        .when('/p5', {
+            templateUrl : 'pages/p5-your-body-speaks.html',
+            controller  : 'blogCtlr'
+        })
+        .when('/p6', {
+            templateUrl : 'pages/p6-vocal-variety.html',
+            controller  : 'blogCtlr'
+        })
+        .when('/p7', {
+            templateUrl : 'pages/p7-research-your-topic.html',
+            controller  : 'blogCtlr'
+        })
+        .when('/p8', {
+            templateUrl : 'pages/p8-audio-visual-aids.html',
+            controller  : 'blogCtlr'
+        })
+        .when('/p9', {
+            templateUrl : 'pages/p9-persuade-your-audience.html',
+            controller  : 'blogCtlr'
+        })
+        .when('/p10', {
+            templateUrl : 'pages/p10-inspire-your-audience.html',
+            controller  : 'blogCtlr'
+        })
+
         .otherwise({
             templateUrl : 'pages/404.html',
             controller  : 'sidoknowiaCtlr'
