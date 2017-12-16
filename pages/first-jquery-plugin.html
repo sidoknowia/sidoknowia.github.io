@@ -1,0 +1,190 @@
+
+<meta name="keywords" content="jquery, jquery plugin, make your jquery plugin, first, first jquery plugin" />
+<meta property="og:url" content="http://sidoknowia.github.io/#/first-jquery-plugin" />
+<meta property="og:title" content="First Jquery Plugin" />
+<meta property="og:description" content="Learn to make jQuery Plugin" />
+<meta name="description" content="Learn to make jQuery Plugin" />
+
+<title>First Jquery Plugin</title>
+<style type="text/css">
+	table, th, td {
+			text-align:center;
+			width:300px;
+			border: 1px solid black;
+			border-collapse: collapse;
+		}
+</style>
+
+<nav-bar></nav-bar>
+
+<div class="site-wrapper">
+    <div class="site-wrapper-inner">
+		<div class="cover-container">
+			<div class="breadcrumbs">
+				<ol class="breadcrumb">
+					<li><a href="#/">Home</a></li>
+					<li><a href="#blog">Blogs</a></li>
+					<li class="active">Build Your Plugin</li>
+				</ol>
+			</div>
+			<div class="inner cover container">
+				<h2 class="page-header">
+					Build Your jQuery Plugin
+				</h2>
+				<p>
+
+				</p>
+				<p>
+					In this tutorial, I will be explaining basics of building your own jQuery Plugin. Our plugin changes the color of table rows! Though this can be easily achieved through css, I believe it forms a good learning example.
+				</p>
+				<p>
+					Here is the <a href="https://jsfiddle.net/sidoknowia/ku3nxact/2/" target="_blank">fiddle link </a> to demo.
+				</p>
+				<div class = "demo container">
+					<div class="col-md-6">
+
+						<table id="mytable">
+							<thead>
+								<tr>
+									<th>City</th>
+									<th>Country</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Pune</td>
+									<td>India</td>
+								</tr>
+								<tr>
+									<td>New York</td>
+									<td>USA</td>
+								</tr>
+								<tr>
+									<td>London</td>
+									<td>UK</td>
+								</tr>
+								<tr>
+									<td>Mumbai</td>
+									<td>India</td>
+								</tr>
+								<tr>
+									<td>Sydney</td>
+									<td>Australia</td>
+								</tr>
+								<tr>
+									<td>Paris</td>
+									<td>France</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="col-md-6">
+						<h4>Our Plugin Options</h4>
+						<span style="">
+							1. Header Background Color - #428bca <br>
+							2. Odd Rows Background Color - Silver <br>
+							3. Even Row Background Color - White <br>
+							4. Font Color - Black <br>
+						</span>
+					</div>
+					
+				</div>
+
+				<div class="container">
+
+					<h5>Plugin Code</h5>
+
+					<pre>
+						<div id="preCode">
+							<code>
+		// the semi-colon before the function invocation is a safety 
+		// net against concatenated scripts and/or other plugins 
+		// that are not closed properly.
+		;(function (window , document , $ , undefined){
+			    
+		    // window and document are passed through as local 
+		    // variables rather than as globals, because this (slightly) 
+		    // quickens the resolution process and can be more 
+		    // efficiently minified (especially when both are 
+		    // regularly referenced in your plugin).
+			
+			
+			// This lets jQuery know that you're extending its methods.
+			// Creating your own function.
+			$.fn.tableCss = function( options ){
+				
+				// Create the defaults once
+				var defaults = { 
+						textColor 	: 'black',    	// text color inside table
+						bkgdColor  	: '#f1f1f1',   	// background color of the table
+						thColor 	: '#428bca',    // background color of th inside table
+						trEven 		: 'white',	// background color of tr with even index table
+						trOdd  		: 'silver'	// background color of tr with odd index table
+				} ;
+				
+				
+			// jQuery has an extend method that merges the 
+		        // contents of two or more objects, storing the 
+		        // result in the first object. The first object 
+		        // is generally empty because we don't want to alter 
+		        // the default options for future instances of the plugin
+			
+				var settings = $.extend({},defaults,options);
+				
+				
+				// Your typical jQuery object will contain references 
+				// to any number of DOM elements, and that's why jQuery objects 
+				// are often referred to as collections. If you want to do 
+				// any manipulating with specific elements 
+				// (e.g. getting a data attribute, calculating specific positions) 
+				// then you need to use .each() to loop through the elements
+				
+				this.each(function(){
+					// Caching $(this), which will improve performance (slightly).
+					// $ sign is added before variable just as reminder that
+					// we are working with jQuery Object
+					var $this = $(this);
+					
+					// Adding css to the table element that will call this function
+					$this.css({
+						color 		: settings.textColor,
+						background  : settings.bkgdColor
+					});
+					
+					var $th = $this.contents().find('th'),
+						$tre = $this.contents().find('tr:even'),
+						$tro = $this.contents().find('tr:odd');
+						
+					$th.css("background" , settings.thColor);
+					$tre.css("background" , settings.trEven);
+					$tro.css("background" , settings.trOdd);
+					
+				});
+					 
+			   // Don't break the chain. we should remember to return the 
+			   // jQuery object so other methods can be chained.
+				return this;
+			};
+			
+		})(window , document, jQuery);
+							</code>
+						</div>
+					</pre>
+
+					<p>Invoke the tableCss function</p>
+					<pre>
+		$("#mytable").tableCss({
+			textColor : '#333',
+			thColor    : '#1fa756',
+			trOdd	     : 'lightBlue'
+		}).hide().fadeIn('slow');
+	
+
+					</pre>
+				</div>
+
+				
+			</div>
+		</div>
+	</div>
+</div>
