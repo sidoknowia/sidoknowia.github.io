@@ -5,11 +5,11 @@ sidoknowia.service('chartService', function() {
 	$this.generateCharts = function(){
 		var doughnutData = [
 			{
-				value: 80,
+				value: 95,
 				color:"#1abc9c"
 			},
 			{
-				value : 20,
+				value : 5,
 				color : "#ecf0f1"
 			}
 		];
@@ -34,11 +34,11 @@ sidoknowia.service('chartService', function() {
 	
 		var doughnutData = [
 							{
-								value: 70,
+								value: 90,
 								color:"#1abc9c"
 							},
 							{
-								value : 30,
+								value : 10,
 								color : "#ecf0f1"
 							}
 						];
@@ -79,11 +79,11 @@ sidoknowia.service('chartService', function() {
 
 		var doughnutData = [
 							{
-								value: 60,
+								value: 65,
 								color:"#1abc9c"
 							},
 							{
-								value : 40,
+								value : 35,
 								color : "#ecf0f1"
 							}
 						];
@@ -94,11 +94,11 @@ sidoknowia.service('chartService', function() {
 
 		var doughnutData = [
 							{
-								value: 70,
+								value: 75,
 								color:"#1abc9c"
 							},
 							{
-								value : 30,
+								value : 25,
 								color : "#ecf0f1"
 							}
 						];
